@@ -24,7 +24,10 @@
 			# Programs used during runtime
             buildInputs = with pkgs;[
 			clang-tools
-			just
+			zig
+			emscripten
+			gdb
+			watchexec
 			raylib
             			];
 			#shellHook = '' '';
