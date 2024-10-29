@@ -1,3 +1,3 @@
-#ifndef MENU
-#define MENU
+#ifndef MENU_H
+#define MENU_H
 #endif

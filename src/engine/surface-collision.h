@@ -1,5 +1,5 @@
-#ifndef SURFACECOLLISION
-#define SURFACECOLLISION
+#ifndef SURFACE_COLLISION_H
+#define SURFACE_COLLISION_H
 
 int GetCollision();
 
