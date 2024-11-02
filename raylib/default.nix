@@ -47,9 +47,11 @@ stdenv.mkDerivation (finalAttrs: {
 
   # https://github.com/raysan5/raylib/wiki/CMake-Build-Options
   cmakeFlags = [
-    "-DUSE_EXTERNAL_GLFW=OFF"
-	"-DPLATAFORM = SDL"
+    # "-DUSE_EXTERNAL_GLFW=ON"
+	"-DPLATAFORM=SDL"
     "-DBUILD_EXAMPLES=OFF"
+    "-DGLFW_BUILD_WAYLAND=OFF"
+    "-DGLFW_BUILD_X11=OFF"
     "-DCUSTOMIZE_BUILD=1"
   ] ++ lib.optional includeEverything "-DINCLUDE_EVERYTHING=ON"
   ++ lib.optional sharedLib "-DBUILD_SHARED_LIBS=ON";

@@ -15,13 +15,13 @@
         system = system;
         config.allowUnfree = true;
       };
-      # Import your custom Raylib derivation
-      raylib = import ./raylib/default.nix;
+	  raylibSDL = pkgs.callPackage ./raylib/default.nix {};
     in
     {
       formatter = pkgs.nixpkgs-fmt;
       devShells.default = pkgs.mkShell {
         name = "Raylib Gamejam";
+
         # Programs used during runtime
         buildInputs = with pkgs; [
           clang-tools
@@ -29,10 +29,8 @@
           emscripten
           gdb
           watchexec
-          raylib    # Include Raylib in the shell environment
+		  raylibSDL
         ];
-        # Optional shellHook, e.g., to print a message or set additional environment variables
-        # shellHook = '' echo "Welcome to Raylib Gamejam DevShell!" '';
       };
     });
 }
