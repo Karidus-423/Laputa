@@ -2,16 +2,17 @@
 #define PLAYER_H
 
 #include "camera.h"
+#include <stdbool.h>
 
-typedef struct Player_State {
-    Vector3 Player_position;
-    Vector3 Player_rotation;
-    Vector3 Player_view;
-    Camera3D Player_camera;
-} Player_State;
+struct Player {
+    bool alive;
+    Camera3D player_Camera;
+    Vector3 player_Position;
+    float player_Speed;
+    float player_Acceleration;
+};
 
-Vector3 PlayerMove(float *delta);
-Camera3D PlayerCamera(Vector3 player_pos);
-Vector3 PlayerView(Vector2 mouse_pos);
+struct Player InitPlayer();
+void PlayerState(struct Player player);
 
 #endif

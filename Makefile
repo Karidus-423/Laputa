@@ -5,7 +5,7 @@ LDFLAGS = -lraylib
 all:${BIN}
 
 build:
-	${CC} -g ./src/game/*.c -o ./Laputa.yay ${LDFLAGS}
+	${CC} -g ./src/game/*.c ./src/menu/*.c -o ./Laputa.yay ${LDFLAGS}
 
 clean:
 	rm -f ./Laputa.yay *~ core
