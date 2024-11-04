@@ -19,7 +19,7 @@
     {
       formatter = pkgs.nixpkgs-fmt;
       devShells.default = pkgs.mkShell {
-        name = "Raylib Gamejam";
+        name = "Game Development";
 
         # Programs used during runtime
         buildInputs = with pkgs; [

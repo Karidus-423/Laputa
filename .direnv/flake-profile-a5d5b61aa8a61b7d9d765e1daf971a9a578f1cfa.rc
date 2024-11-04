@@ -35,7 +35,7 @@ NIX_CC='/nix/store/vh9fsdhgxcnab2qk7vdp2palkkn6j3cp-gcc-wrapper-13.3.0'
 export NIX_CC
 NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu='1'
 export NIX_CC_WRAPPER_TARGET_HOST_x86_64_unknown_linux_gnu
-NIX_CFLAGS_COMPILE=' -frandom-seed=xhw4s9cx7n -isystem /nix/store/21p53fvw6b3sjv9iycy7gk3y2gws5fzm-gdb-15.1/include -isystem /nix/store/zyn4sj6s6mvp3jviy54g34krapi5kkaq-raylib-5.0/include -isystem /nix/store/7hmqy5sr0hql771i61zfjfdy8h59gcm5-glu-9.0.3-dev/include -isystem /nix/store/j9g6v39lhdikpwpcv4b317fpwbs81z8r-libglvnd-1.7.0-dev/include -isystem /nix/store/hhg06qy834div9x1za8cd8giwkisqs7d-libX11-1.8.10-dev/include -isystem /nix/store/6kqqglmwhrqjd4i8z4fycyming0r7v2z-xorgproto-2024.1/include -isystem /nix/store/y17mkjl442q2s12iy8nwr0r21mimvi4f-libxcb-1.17.0-dev/include -isystem /nix/store/21p53fvw6b3sjv9iycy7gk3y2gws5fzm-gdb-15.1/include -isystem /nix/store/zyn4sj6s6mvp3jviy54g34krapi5kkaq-raylib-5.0/include -isystem /nix/store/7hmqy5sr0hql771i61zfjfdy8h59gcm5-glu-9.0.3-dev/include -isystem /nix/store/j9g6v39lhdikpwpcv4b317fpwbs81z8r-libglvnd-1.7.0-dev/include -isystem /nix/store/hhg06qy834div9x1za8cd8giwkisqs7d-libX11-1.8.10-dev/include -isystem /nix/store/6kqqglmwhrqjd4i8z4fycyming0r7v2z-xorgproto-2024.1/include -isystem /nix/store/y17mkjl442q2s12iy8nwr0r21mimvi4f-libxcb-1.17.0-dev/include'
+NIX_CFLAGS_COMPILE=' -frandom-seed=70s5h7d47q -isystem /nix/store/21p53fvw6b3sjv9iycy7gk3y2gws5fzm-gdb-15.1/include -isystem /nix/store/zyn4sj6s6mvp3jviy54g34krapi5kkaq-raylib-5.0/include -isystem /nix/store/7hmqy5sr0hql771i61zfjfdy8h59gcm5-glu-9.0.3-dev/include -isystem /nix/store/j9g6v39lhdikpwpcv4b317fpwbs81z8r-libglvnd-1.7.0-dev/include -isystem /nix/store/hhg06qy834div9x1za8cd8giwkisqs7d-libX11-1.8.10-dev/include -isystem /nix/store/6kqqglmwhrqjd4i8z4fycyming0r7v2z-xorgproto-2024.1/include -isystem /nix/store/y17mkjl442q2s12iy8nwr0r21mimvi4f-libxcb-1.17.0-dev/include -isystem /nix/store/21p53fvw6b3sjv9iycy7gk3y2gws5fzm-gdb-15.1/include -isystem /nix/store/zyn4sj6s6mvp3jviy54g34krapi5kkaq-raylib-5.0/include -isystem /nix/store/7hmqy5sr0hql771i61zfjfdy8h59gcm5-glu-9.0.3-dev/include -isystem /nix/store/j9g6v39lhdikpwpcv4b317fpwbs81z8r-libglvnd-1.7.0-dev/include -isystem /nix/store/hhg06qy834div9x1za8cd8giwkisqs7d-libX11-1.8.10-dev/include -isystem /nix/store/6kqqglmwhrqjd4i8z4fycyming0r7v2z-xorgproto-2024.1/include -isystem /nix/store/y17mkjl442q2s12iy8nwr0r21mimvi4f-libxcb-1.17.0-dev/include'
 export NIX_CFLAGS_COMPILE
 NIX_ENFORCE_NO_NATIVE='1'
 export NIX_ENFORCE_NO_NATIVE
@@ -129,7 +129,7 @@ guess='16'
 initialPath='/nix/store/ph44jcx3ddmlwh394mh1wb7f1qigxqb1-coreutils-9.5 /nix/store/yb8icljkwhk5lla4nci3myndq2m4ywly-findutils-4.10.0 /nix/store/phqahkhjsk8sl2jjiid1d47l2s4wy33h-diffutils-3.10 /nix/store/yd9vbyhbxx62j0cyhd6v0iacz11nxpvc-gnused-4.9 /nix/store/lvnwdmnjm7nvaq0a3vhvvn46iy4ql7gr-gnugrep-3.11 /nix/store/0np7q7np75csai2cwzx57n332vn9ig4i-gawk-5.2.2 /nix/store/zvn9bvrl2g516d2hfnanljiw24qa6w8l-gnutar-1.35 /nix/store/db379c3zrmncmbv5khqxpk6ggbhxjw61-gzip-1.13 /nix/store/girfp68w14pxfii52ak8gcs212y4q2s2-bzip2-1.0.8-bin /nix/store/21y3gqgm2a3w94m0wcrz1xxshks80z7p-gnumake-4.4.1 /nix/store/717iy55ncqs0wmhdkwc5fg2vci5wbmq8-bash-5.2p32 /nix/store/91ixz3zw9ipc5j93gybir9fp5mzisq8w-patch-2.7.6 /nix/store/6v73xwg2c7p5ap29ckyg18ng87pzlnxs-xz-5.6.2-bin /nix/store/a6nsbir3y5ni3wwkw933aqvcmyyywnnz-file-5.45'
 mesonFlags=''
 export mesonFlags
-name='Raylib-Gamejam-env'
+name='Game-Development-env'
 export name
 nativeBuildInputs=''
 export nativeBuildInputs
