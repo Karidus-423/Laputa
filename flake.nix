@@ -15,7 +15,6 @@
         system = system;
         config.allowUnfree = true;
       };
-	  raylibSDL = pkgs.callPackage ./raylib/default.nix {};
     in
     {
       formatter = pkgs.nixpkgs-fmt;
@@ -29,7 +28,7 @@
           emscripten
           gdb
           watchexec
-		  raylibSDL
+		  raylib
         ];
       };
     });
