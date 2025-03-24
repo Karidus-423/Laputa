@@ -5,18 +5,21 @@ pub fn build(b: *std.Build) void {
     const optimize = b.standardOptimizeOption(.{});
 
     const exe = b.addExecutable(.{
-        .name = "aquarium",
+        .name = "LaPuta",
         .target = target,
         .optimize = optimize,
     });
 
     const c_files = [_][]const u8{
         "main.c",
+        "player.c",
+        "camera.c",
+        "level-utils.c",
+        "./levels/level-debug.c",
     };
 
     exe.root_module.addCSourceFiles(.{
         .root = b.path("src/"),
-        .flags = &.{ "-lraylib", "-lm", "-lSDL2" },
         .files = &c_files,
     });
 
