@@ -72,8 +72,6 @@ int main() {
     DrawFPS(0, 0);
     BeginMode3D(curr_player->cam);
 
-    DrawGrid(20, 1.0f);
-
     if (selected_level == NULL) {
       selected_level = LoadLevel(LEVEL_DEBUG);
     }
@@ -81,6 +79,7 @@ int main() {
     if (selected_level->loaded == true) {
       DrawLevel(selected_level);
     }
+    DrawGrid(10, 2.0f);
 
     EndMode3D();
     EndDrawing();

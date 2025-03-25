@@ -6,13 +6,11 @@
 
 Level_t *LoadLevel(level_id selected) {
   Level_t *load;
-  printf("Loading level.....\n");
   switch (selected) {
   case LEVEL_DEBUG:
     load = DebugLevel();
     if (load != NULL) {
       load->loaded = true;
-      printf("Loaded Level!\n");
     }
     break;
   case LEVEL_ONE:
@@ -21,20 +19,23 @@ Level_t *LoadLevel(level_id selected) {
   if (load == NULL) {
     printf("Unable to load level %d\n", selected);
     perror("Level load error\n");
+  } else {
+    printf("INFO: LEVEL: [ID %d] Level loaded successfully\n", selected);
   }
   return load;
 };
 
 void UnloadLevel(Level_t *level) {
+  printf("INFO: LEVEL: [ID %d] Level unloaded ", level->id);
   if (level != NULL) {
     if (level->loaded == true) {
       if (level->objects != NULL) {
         free(level->objects);
       }
       free(level);
-      printf("Unloaded level succesfully\n");
+      printf("success\n");
     } else {
-      printf("Level is not loaded for it to unload\n");
+      printf("failure\n");
     }
   } else {
     printf("Passed Level ptr == NULL\n");
