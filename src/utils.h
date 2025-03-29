@@ -35,5 +35,6 @@ typedef struct object_opts {
 
 void CameraUpdate(Camera3D *camera, float accel, bool free);
 void PlayerUpdate(Player_t *player, bool free_cam);
+void CheckEvents();
 
 #endif

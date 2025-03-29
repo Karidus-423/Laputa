@@ -17,25 +17,25 @@ Level_t *LoadLevel(level_id selected) {
     break;
   }
   if (load == NULL) {
-    printf("Unable to load level %d\n", selected);
-    perror("Level load error\n");
+    TraceLog(LOG_ERROR, "Unable to load level %d", selected);
   } else {
-    printf("INFO: LEVEL: [ID %d] Level loaded successfully\n", selected);
+    TraceLog(LOG_INFO, "LEVEL: [ID %d] Level loaded successfully", selected);
   }
   return load;
 };
 
 void UnloadLevel(Level_t *level) {
-  printf("INFO: LEVEL: [ID %d] Level unloaded ", level->id);
   if (level != NULL) {
     if (level->loaded == true) {
       if (level->objects != NULL) {
         free(level->objects);
       }
       free(level);
-      printf("success\n");
+      TraceLog(LOG_INFO, "LEVEL: [ID %d] Level unloaded successfully",
+               level->id);
     } else {
-      printf("failure\n");
+      TraceLog(LOG_WARNING, "LEVEL: [ID %d] Level not unloaded successfully",
+               level->id);
     }
   } else {
     printf("Passed Level ptr == NULL\n");

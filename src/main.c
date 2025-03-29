@@ -11,12 +11,16 @@ World_t world = {
 
 int main() {
   Window_t win = {
-      .height = 1000,
-      .width = 1400,
+      .height = 1100,
+      .width = 1800,
   };
 
   InitWindow(win.width, win.height, "Laputa");
   SetTargetFPS(60);
+
+  HideCursor();
+  SetMousePosition(win.width / 2, win.height / 2);
+  DisableCursor();
 
   Camera3D player_cam = {
       .projection = CAMERA_PERSPECTIVE,
@@ -36,6 +40,7 @@ int main() {
 
   Player_t p_main = {
       .cam = player_cam,
+      .pos = (Vector3){0, 0, 0},
       .accel = 12,
   };
 
@@ -65,13 +70,13 @@ int main() {
       curr_player->cam.target = Vector3Zero();
     }
 
-    PlayerUpdate(curr_player, d_opts.free);
-
     BeginDrawing();
     ClearBackground(BONE);
     DrawFPS(0, 0);
+    DrawRing((Vector2){(float)win.width / 2, (float)win.height / 2}, 8, 10, 0,
+             360, 30, GRAY);
     BeginMode3D(curr_player->cam);
-
+    PlayerUpdate(curr_player, d_opts.free);
     if (selected_level == NULL) {
       selected_level = LoadLevel(LEVEL_DEBUG);
     }
