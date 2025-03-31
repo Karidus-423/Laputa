@@ -5,6 +5,7 @@
 #include <stdbool.h>
 
 #define BONE CLITERAL(Color){207, 207, 207, 255} // Black
+//
 
 typedef struct Debug_opts {
   bool free;
@@ -17,9 +18,14 @@ typedef struct window_opts {
 } Window_t;
 
 typedef struct player_opts {
+  Model model;
+  BoundingBox box;
   Camera3D cam;
   Vector3 pos;
   float accel;
+  float speed;
+  bool debug;
+  bool alive;
 } Player_t;
 
 typedef struct world_opts {
@@ -34,7 +40,7 @@ typedef struct object_opts {
 } Object_t;
 
 void CameraUpdate(Camera3D *camera, float accel, bool free);
-void PlayerUpdate(Player_t *player, bool free_cam);
-void CheckEvents();
+void PlayerUpdate(Player_t *player);
+void CheckEvents(Player_t *player);
 
 #endif

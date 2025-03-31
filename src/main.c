@@ -42,12 +42,14 @@ int main() {
       .cam = player_cam,
       .pos = (Vector3){0, 0, 0},
       .accel = 12,
+      .debug = false,
   };
 
   Player_t p_debug = {
       .cam = debug_cam,
       .pos = (Vector3){0, 0, 0},
       .accel = 25,
+      .debug = true,
   };
 
   Player_t *curr_player = &p_main;
@@ -66,27 +68,29 @@ int main() {
       printf("%s\n", d_opts.free ? "DEBUG CAM" : "PLAYER CAM");
     }
 
-    if (IsKeyPressed(KEY_Z)) {
-      curr_player->cam.target = Vector3Zero();
-    }
+    CheckEvents(curr_player);
 
     BeginDrawing();
+    //---RENDERING START---//
     ClearBackground(BONE);
     DrawFPS(0, 0);
-    DrawRing((Vector2){(float)win.width / 2, (float)win.height / 2}, 8, 10, 0,
-             360, 30, GRAY);
+    //---3D VIEW START---//
     BeginMode3D(curr_player->cam);
-    PlayerUpdate(curr_player, d_opts.free);
+
     if (selected_level == NULL) {
       selected_level = LoadLevel(LEVEL_DEBUG);
     }
-
     if (selected_level->loaded == true) {
       DrawLevel(selected_level);
     }
+
     DrawGrid(10, 2.0f);
 
     EndMode3D();
+    //---3D VIEW END---//
+    DrawRing((Vector2){(float)win.width / 2, (float)win.height / 2}, 8, 10, 0,
+             360, 30, GRAY);
+    //---RENDERING END---//
     EndDrawing();
   }
 
@@ -96,3 +100,5 @@ int main() {
 
   CloseWindow();
 }
+
+void CheckEvents(Player_t *player) { PlayerUpdate(player); }
