@@ -25,5 +25,8 @@ void CameraUpdate(Camera3D *camera, float accel, bool free) {
       CameraMoveUp(camera, player_speed);
     if (IsKeyDown(KEY_LEFT_CONTROL))
       CameraMoveUp(camera, -player_speed);
+  } else {
+    if (IsKeyDown(KEY_SPACE)) {
+    }
   }
 }
