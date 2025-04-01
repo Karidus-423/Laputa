@@ -12,10 +12,6 @@ pub fn build(b: *std.Build) void {
 
     const c_files = [_][]const u8{
         "main.c",
-        "player.c",
-        "camera.c",
-        "level-utils.c",
-        "./levels/level-debug.c",
     };
 
     exe.root_module.addCSourceFiles(.{
