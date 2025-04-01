@@ -91,6 +91,7 @@ int main() {
     DrawRing((Vector2){(float)win.width / 2, (float)win.height / 2}, 8, 10, 0,
              360, 30, GRAY);
     //---RENDERING END---//
+    // PLEASE WORK---//
     EndDrawing();
   }
 
