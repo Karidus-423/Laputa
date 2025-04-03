@@ -19,9 +19,8 @@ pub fn build(b: *std.Build) void {
         .files = &c_files,
     });
 
-    exe.linkSystemLibrary("raylib");
-    exe.linkSystemLibrary("m");
-    exe.linkSystemLibrary("SDL2");
+    exe.linkSystemLibrary("SDL3");
+    exe.linkSystemLibrary("c");
 
     b.installArtifact(exe);
 
